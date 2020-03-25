@@ -48,7 +48,7 @@ docker commit <ContainerID> bde2020/spark-master:ls
 
 ## restart changed container
 ```
-docker run --name spark-master -h spark-master -e ENABLE_INIT_DAEMON=false -d -d bde2020/spark-master:ls
+docker run --name spark-master -h spark-master -e ENABLE_INIT_DAEMON=false -p 7077:7077 -p 6066:6066 -p  8081:8080 -d bde2020/spark-master:ls
 ```
 
 
